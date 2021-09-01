@@ -1,0 +1,17 @@
+<div class="container my-3">
+  <h3>You are in Show Lists</h3>
+  <h1><%= @list.name %></h1>
+  <ul>
+    <% @list.movies.each do |movie| %>
+      <li>
+        <p><%= movie.title %></p>
+        <!-- <!%= link_to list.movie, list_path(list) %> -->
+      </li>
+    <% end %>
+  </ul>
+
+
+
+
+  <%= link_to "Back to Lists", lists_path, class:"btn btn-light rounded-pill" %>
+</div>

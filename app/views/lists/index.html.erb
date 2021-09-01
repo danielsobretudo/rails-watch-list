@@ -1,0 +1,15 @@
+<div class="container my-3">
+  <h3>you are in Lists View</h3>
+  <h5>Available Lists:</h5>
+
+  <ul>
+    <% @lists.each do |list| %>
+      <li>
+        <%= link_to list.name, list_path(list) %>
+      </li>
+    <% end %>
+  </ul>
+
+  <p><%= link_to "new list", new_list_path %></p>
+
+</div>
